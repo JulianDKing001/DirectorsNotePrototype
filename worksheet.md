@@ -4,11 +4,8 @@
 
 Name : Nnadebem Agu
 
-_________________________________
-
 Date : 19/11/2026
 
-_________________________________
 
 ## Today's Big Idea
 
@@ -40,7 +37,7 @@ ___________________________________________________________________
 
 What opportunity or problem interested you most?
 
-I was interested more in the UI design of the website. I observed that when you scroll down on the website the header UI stays the same size rather than shrinking down to make more room for the User to fully immerse themselves in what they are looking for. The Header not moving upwards and shrinking down makes me feel(in my opinion), a bit clausterphobic or that theres not enough room while viewing the site. 
+I am interested more in the UI design of the website. I observed that when you scroll down on the website the header UI stays the same size rather than shrinking down to make more room for the User to fully immerse themselves in what they are looking for. The Header not moving upwards and shrinking down makes me feel(in my opinion), a bit clausterphobic or that theres not enough room while viewing the site. 
 I also want to add more arty theme to the to the background and make the search be a magnifying icon instead(this is just a thought for now).
 
 
@@ -82,6 +79,7 @@ How could you make your first-choice brief your own? Think about the films or
 filmmakers you would feature, a theme or genre, your visitor, the look and the
 way people move through it.
 
+Rather than asking a whole barrage of questions, i can just ask the user to pick themes, emotions, or genres they are interested in. I could aslso add a feature where they can roll for random words and get movies that relate to those words mixed together(Something similar to a spinning wheel that has to roll 3 times for Theme, Duration, and Genre/Emotion). 
 ___________________________________________________________________
 
 ___________________________________________________________________
@@ -128,10 +126,12 @@ ___________________________________________________________________
 
 Who are you designing for?
 
+Film makers, Film enthusiasts, Aspiring film makers, or creative professionals.
 ___________________________________________________________________
 
 What is that person trying to do?
 
+The person wants a quick way to locate and access what they are interested in.
 ___________________________________________________________________
 
 ___________________________________________________________________
@@ -140,6 +140,7 @@ ___________________________________________________________________
 
 Describe the opportunity in your own words.
 
+The opportunity is to create a platform where filmmakers, film enthusiasts, and film students can discover independent films, creative ideas and the process of making of films. 
 ___________________________________________________________________
 
 ___________________________________________________________________
@@ -151,6 +152,14 @@ you agreed with your tutor), then summarise it as one clear goal.
 
 > My first goal is to...
 
+## Starting Point
+
+- Ask the visitor two or three simple questions.
+- Use the answers to recommend one fictional film.
+- Explain why the film was recommended.
+- Let the visitor start again.
+
+I want to display recommended fictional films using the answers from the questions the user chooses. This should be clear and accurate enough for the user to be satisfied with this feature.
 ___________________________________________________________________
 
 ___________________________________________________________________
@@ -159,11 +168,15 @@ ___________________________________________________________________
 
 What will you deliberately not build yet?
 
+I am deliberately avoid manipulating the UI too much for now. I was going to add minor UI animations to the website to make it feel more interactive but that would most likely take longer to implement.
+
 ___________________________________________________________________
 
 ___________________________________________________________________
 
 Which Possible Direction (or later idea) might remain in your future backlog?
+
+Adding minor animations to the website to make it feel  more alive and entertaining to explore and admire.
 
 ___________________________________________________________________
 
@@ -203,13 +216,17 @@ Create a new individual GitHub repository and initialise it with a README.
 
 Repository name:
 
-___________________________________________________________________
+My repository is called "DirectorsNotePrototype".
+ ___________________________________________________________________
 
 Repository URL:
 
+https://github.com/JulianDKing001/DirectorsNotePrototype
 ___________________________________________________________________
 
 Why is this repository separate from the shared bootcamp repository?
+
+It is seperate so i can work independently on my own project and to avoid overwriting the original and other peoples works. It is also seperate to make sure the project is organised and easy to access. 
 
 ___________________________________________________________________
 
@@ -223,10 +240,13 @@ Clone the repository to your computer and open it in Visual Studio Code.
 
 Local repository location:
 
+C:\Users\julia\OneDrive\Documents\Repository
+
 ___________________________________________________________________
 
 What is the difference between the GitHub repository and your local clone?
 
+Github repository is stored online and can be retrieved, modified and used on any device you are currently using. Local repositories are only available on the device you are currently using it on. 
 ___________________________________________________________________
 
 ___________________________________________________________________
@@ -240,10 +260,12 @@ throughout the bootcamp.
 
 Project board URL:
 
+https://github.com/users/JulianDKing001/projects/1/views/1
 ___________________________________________________________________
 
 What does the board help you see?
 
+It helps to keep me on a path that i should follow to make sure to meet milestones i set for myself and make sure i do them on time.
 ___________________________________________________________________
 
 ---
@@ -268,10 +290,12 @@ Avoid one large item such as “build the app”.
 
 Which item should happen first?
 
+Research and planning should happen first. 
 ___________________________________________________________________
 
 Which item can wait?
 
+Extra Visual Effects can wait until the platform is running without much problems.
 ___________________________________________________________________
 
 Is every item required by the Starting Point? If not, move optional work lower.
@@ -298,17 +322,22 @@ Include:
 
 Project name:
 
+DirectorsNotes Prototype
+
 ___________________________________________________________________
 
 One-sentence description:
 
+My own prototype of DirectorsNotes
 ___________________________________________________________________
 
 Intended visitor:
 
+Anyone interested in Media, Film, Professional filmmakers, Aspiring Flim Makers, or Creative professionals.
 ___________________________________________________________________
 
 Starting Point:
+
 
 ___________________________________________________________________
 
