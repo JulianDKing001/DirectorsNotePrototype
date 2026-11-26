@@ -1,5 +1,6 @@
 :root {
   --ink: #191813;
+  --Demacation: #8500b9;
   --paper: #f4f0e5;
   --acid: #d8ff42;
   --orange: #ef5b38;
@@ -30,7 +31,7 @@ footer {
   gap: 2rem;
   align-items: end;
   padding: 3rem 0 2rem;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 2px solid var(--Demacation);
 }
 
 .kicker,
@@ -54,7 +55,7 @@ h1 {
   min-width: 210px;
   padding: 1rem;
   background: var(--ink);
-  color: var(--paper);
+  color: var(--Demacation);
   transform: rotate(1.5deg);
 }
 
@@ -76,20 +77,40 @@ h1 {
 .film-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 2rem;
   padding-bottom: 3rem;
 }
 
+/* Film card design */
 .film-card {
   display: grid;
   grid-template-columns: minmax(135px, 0.7fr) 1.3fr;
   min-height: 280px;
+
   border: 2px solid var(--ink);
+  border-radius: 16px;
+
   background: #fffdf7;
-  box-shadow: 7px 7px 0 var(--ink);
+
+  /* Remove the old shadow */
+  box-shadow: none;
+
+  /* Smooth hover animation */
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.film-art { min-height: 180px; border-right: 2px solid var(--ink); }
+/* Lift card when hovering */
+.film-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--Demacation);
+}
+
+.film-art {
+  min-height: 180px;
+  border-right: 2px solid var(--ink);
+
+  border-radius: 14px 0 0 14px;
+}
 .film-card--coast .film-art { background: repeating-linear-gradient(12deg, var(--blue) 0 14px, var(--acid) 14px 18px); }
 .film-card--weather .film-art { background: radial-gradient(circle at 30% 25%, var(--acid) 0 12%, transparent 13%), var(--orange); }
 .film-card--machines .film-art { background: repeating-linear-gradient(90deg, var(--ink) 0 8px, var(--paper) 8px 22px); }
@@ -125,6 +146,106 @@ footer { border-top: 2px solid var(--ink); padding: 1rem 0 2rem; }
 }
 
 @media (max-width: 520px) {
-  .film-card { grid-template-columns: 1fr; }
-  .film-art { border-right: 0; border-bottom: 2px solid var(--ink); }
+
+    .film-card {
+        grid-template-columns: 1fr;
+    }
+
+    .film-art {
+        border-right: 0;
+        border-bottom: 2px solid var(--ink);
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .archive-tools {
+        width: 55%;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+}
+
+/* Main website background */
+body {
+    background-color: #f0e8f5;
+}
+
+/* Header */
+.site-header {
+    background-color: #DCE5DC;
+}
+
+/* Film archive search area */
+.archive-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+/* Search bar container */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--Demacation);
+    background: #fffdf7;
+    width: 260px;
+    height: 45px;
+}
+
+/* Search input */
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 0.75rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+}
+
+/* Search placeholder */
+.search-box input::placeholder {
+    color: #888;
+}
+
+/* Search icon button */
+.search-box .search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    margin: 0;
+    padding: 0 0.8rem;
+    border: none;
+    border-left: 2px solid var(--Demacation);
+    background: var(--Demacation);
+    color: white;
+    box-shadow: none;
+}
+
+/* Hover effect */
+.search-box .search-button:hover {
+    background: var(--ink);
+    transform: none;
+}
+
+/* Focus effect */
+.search-box:focus-within {
+    outline: 3px solid var(--acid);
+    outline-offset: 3px;
+}
+
+/* Runtime text */
+.archive-tools p {
+    margin: 0;
+    font-size: 0.9rem;
 }
