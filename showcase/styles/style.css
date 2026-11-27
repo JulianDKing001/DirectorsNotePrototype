@@ -18,22 +18,19 @@ body {
   line-height: 1.45;
 }
 
-.site-header,
+/* Main content width */
 main,
 footer {
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
 }
 
+/* Full-width website header */
 .site-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: end;
-  padding: 3rem 0 2rem;
-  border-bottom: 2px solid var(--Demacation);
+  width: 100%;
+  margin: 0;
+  padding: 3rem max(1.5rem, calc((100% - 1180px) / 2)) 2rem;
 }
-
 .kicker,
 .film-meta {
   text-transform: uppercase;
@@ -53,10 +50,25 @@ h1 {
 
 .programme-summary {
   min-width: 210px;
-  padding: 1rem;
+  padding: 1.25rem;
+
   background: var(--ink);
-  color: var(--Demacation);
-  transform: rotate(1.5deg);
+  color: var(--acid);
+
+  border-radius: 14px;
+
+  transform: none;
+
+  transition: transform 0.25s ease;
+}
+
+.programme-summary strong {
+  margin: 0.35rem 0;
+  font-size: 2rem;
+}
+
+.programme-summary small {
+  color: #d5d2c8;
 }
 
 .programme-summary span,
@@ -81,35 +93,47 @@ h1 {
   padding-bottom: 3rem;
 }
 
-/* Film card design */
+/* Modern film cards */
 .film-card {
   display: grid;
   grid-template-columns: minmax(135px, 0.7fr) 1.3fr;
+
   min-height: 280px;
 
-  border: 2px solid var(--ink);
-  border-radius: 16px;
+  border: 1px solid #d8d2c5;
+  border-radius: 18px;
 
   background: #fffdf7;
 
-  /* Remove the old shadow */
   box-shadow: none;
 
-  /* Smooth hover animation */
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
-/* Lift card when hovering */
-.film-card:hover {
-  transform: translateY(-7px);
-  border-color: var(--Demacation);
+/* Card hover animation */
+@media (hover: hover) and (pointer: fine) {
+  .film-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--Demacation);
+  }
 }
 
 .film-art {
   min-height: 180px;
-  border-right: 2px solid var(--ink);
+  border-right: 1px solid #d8d2c5;
 
-  border-radius: 14px 0 0 14px;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .film-card:hover .film-art {
+    transform: scale(1.025);
+  }
 }
 .film-card--coast .film-art { background: repeating-linear-gradient(12deg, var(--blue) 0 14px, var(--acid) 14px 18px); }
 .film-card--weather .film-art { background: radial-gradient(circle at 30% 25%, var(--acid) 0 12%, transparent 13%), var(--orange); }
@@ -122,17 +146,46 @@ h1 {
 .film-copy h3 { margin: 0.35rem 0; font-size: 1.65rem; line-height: 1; }
 .film-meta { margin: 0; }
 
+/* Modern buttons */
 button {
   align-self: flex-start;
   margin-top: auto;
-  padding: 0.65rem 0.85rem;
-  border: 2px solid var(--ink);
+
+  padding: 0.75rem 1.1rem;
+
+  border: none;
+  border-radius: 9px;
+
   background: var(--acid);
   color: var(--ink);
+
   font: inherit;
   font-weight: 700;
-  box-shadow: 3px 3px 0 var(--ink);
+
+  box-shadow: none;
+
   cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Button hover */
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background: var(--Demacation);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: none;
+  }
+}
+
+/* Keyboard accessibility */
+button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
 }
 
 button:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
@@ -194,6 +247,8 @@ body {
     display: flex;
     align-items: center;
     border: 2px solid var(--Demacation);
+    border-radius: 12px;
+    overflow: hidden;
     background: #fffdf7;
     width: 260px;
     height: 45px;
@@ -226,7 +281,7 @@ body {
     margin: 0;
     padding: 0 0.8rem;
     border: none;
-    border-left: 2px solid var(--Demacation);
+    border-radius: 0;
     background: var(--Demacation);
     color: white;
     box-shadow: none;
